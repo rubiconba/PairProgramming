@@ -8,6 +8,8 @@ buildscript {
     dependencies {
         classpath(pluginDep.gradle)
         classpath(pluginDep.kotlin)
+        classpath(pluginDep.hilt)
+        classpath(pluginDep.safeArgs)
     }
 }
 

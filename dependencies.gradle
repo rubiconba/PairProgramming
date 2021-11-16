@@ -1,8 +1,8 @@
 ext {
     conf = [
-            compileSdk: 31,
-            targetSdk: 31,
-            minSdk: 23,
+            compileSdk               : 31,
+            targetSdk                : 31,
+            minSdk                   : 23,
             testInstrumentationRunner: "androidx.test.runner.AndroidJUnitRunner",
             jvmTarget                : "1.8",
             javaCompileCompatibility : JavaVersion.VERSION_1_8,
@@ -10,26 +10,32 @@ ext {
     ]
 
     version = [
-            kotlin: "1.6.0",
-            gradle: "7.0.3",
-            ktx: "1.7.0",
-            appCompat: "1.3.1",
-            material: "1.4.0",
+            kotlin          : "1.5.31",
+            gradle          : "7.0.3",
+            ktx             : "1.7.0",
+            appCompat       : "1.3.1",
+            material        : "1.4.0",
             constraintLayout: "2.1.1",
             junit4          : "4.13.2",
             junitIntegration: "1.1.3",
-            espresso        : "3.4.0"
+            espresso        : "3.4.0",
+            hilt            : "2.38.1",
+            retrofit        : "2.9.0",
+            moshi           : "1.12.0",
+            navigation      : "2.3.5"
     ]
 
     pluginDep = [
-            gradle : "com.android.tools.build:gradle:$version.gradle",
-            kotlin: "org.jetbrains.kotlin:kotlin-gradle-plugin:$version.kotlin"
+            gradle  : "com.android.tools.build:gradle:$version.gradle",
+            kotlin  : "org.jetbrains.kotlin:kotlin-gradle-plugin:$version.kotlin",
+            hilt    : "com.google.dagger:hilt-android-gradle-plugin:$version.hilt",
+            safeArgs: "androidx.navigation:navigation-safe-args-gradle-plugin:$version.navigation"
     ]
 
     androidLib = [
-            ktx: "androidx.core:core-ktx:$version.ktx",
-            appCompat: "androidx.appcompat:appcompat:$version.appCompat",
-            material: "com.google.android.material:material:$version.material",
+            ktx             : "androidx.core:core-ktx:$version.ktx",
+            appCompat       : "androidx.appcompat:appcompat:$version.appCompat",
+            material        : "com.google.android.material:material:$version.material",
             constraintLayout: "androidx.constraintlayout:constraintlayout:$version.constraintLayout"
     ]
 
@@ -37,5 +43,22 @@ ext {
             junit4          : "junit:junit:$version.junit4",
             junitIntegration: "androidx.test.ext:junit:$version.junitIntegration",
             espresso        : "androidx.test.espresso:espresso-core:$version.espresso"
+    ]
+
+    di = [
+            hilt        : "com.google.dagger:hilt-android:$version.hilt",
+            hiltCompiler: "com.google.dagger:hilt-android-compiler:$version.hilt"
+    ]
+
+    networking = [
+            retrofit      : "com.squareup.retrofit2:retrofit:$version.retrofit",
+            moshiConverter: "com.squareup.retrofit2:converter-moshi:$version.retrofit",
+            moshi         : "com.squareup.moshi:moshi:$version.moshi",
+            moshiCodeGen  : "com.squareup.moshi:moshi-kotlin-codegen:$version.moshi"
+    ]
+
+    routing = [
+            jetpackNavigation: "androidx.navigation:navigation-fragment-ktx:$version.navigation",
+            ktx              : "androidx.navigation:navigation-ui-ktx:$version.navigation",
     ]
 }

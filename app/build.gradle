@@ -1,6 +1,9 @@
 plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
+    id("com.android.application")
+    id("kotlin-android")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
+    id("androidx.navigation.safeargs")
 }
 
 android {
@@ -36,7 +39,20 @@ dependencies {
     implementation androidLib.ktx
     implementation androidLib.material
     implementation androidLib.appCompat
+    implementation di.hilt
+    kapt di.hiltCompiler
+    api networking.retrofit
+    implementation networking.moshiConverter
+    implementation networking.moshi
+    kapt networking.moshiCodeGen
+    implementation routing.jetpackNavigation
+    implementation routing.ktx
     testImplementation testLib.junit4
     androidTestImplementation testLib.junitIntegration
     androidTestImplementation testLib.espresso
+}
+
+// Allow references to generated code (Hilt requirement)
+kapt {
+    correctErrorTypes = true
 }
