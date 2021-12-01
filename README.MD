@@ -7,9 +7,9 @@
 - JDK 11
 
 ## The goal
-The goal of this assignment is to fetch the latest trending Kotlin repositories from the github. 
+The goal of this assignment is to fetch the latest trending repositories. 
 
-Backend documentation is obtainable from [here](https://docs.trending-github.com/routes/repositories).
+API endpoint that is being used can be found [here](https://api.jsonbin.io/b/61a761cd0ddbee6f8b15424f).
 
 ## Libraries
 - Retrofit
