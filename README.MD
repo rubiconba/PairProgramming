@@ -9,7 +9,7 @@
 ## The goal
 The goal of this assignment is to fetch the latest trending repositories. 
 
-API endpoint that is being used can be found [here](https://api.jsonbin.io/b/61a761cd0ddbee6f8b15424f).
+API endpoint that is being used can be found [here](https://api.jsonbin.io/v3/b/6362787865b57a31e6aaae21).
 
 ## Libraries
 - Retrofit
